@@ -5,13 +5,13 @@ import Head from "next/head";
 
 function MyApp({ Component, pageProps}: AppProps): JSX.Element {
   return (
-    <React.Fragment>
+    <>
       <Head>
-        <title>Next create</title>
-        <link key={1} rel="icon" href="/favicon2.ico"/>
+        <title>Next practice</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
-    </React.Fragment>
+    </>
   );
 }
 
