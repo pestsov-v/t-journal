@@ -18,8 +18,10 @@ a {
 
 :root {
 	--black: #38434E;
+	--grey-ligth: #EBEBEB;
 	--white: #FFF;
 	--primary: #7653FC;
+	--primary-hover: #6344DF;
 	--red: #FC836D;
 	--green: #1DC37E;
 	--green-ligth: #C8F8E4;
