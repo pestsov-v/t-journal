@@ -23,7 +23,8 @@ export const Button = ({appearance, arrow = 'none', children, className, ...prop
             }
             >
             <ArrowIcon />
-            </span>}
+            </span>
+            }
         </button>
     );
 };
