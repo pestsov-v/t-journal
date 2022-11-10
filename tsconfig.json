@@ -98,7 +98,7 @@
     "jsx": "preserve"
   },
   "include": [
-    "next-env.d.ts",
+    "next-env-dev.d.ts",
     "images.d.ts",
     "**/*.ts",
     "**/*.tsx"
