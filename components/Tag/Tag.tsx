@@ -1,8 +1,8 @@
-import cn from 'classnames'
+import cn from 'classnames';
 import {TagProps} from "./Tag.props";
-import styles from './Tag.module.css'
+import styles from './Tag.module.css';
 
-export const Tag = ({size, children, color = 'ghost', href,className, ...props}: TagProps) => {
+export const Tag = ({size = 'middle', children, color = 'ghost', href,className, ...props}: TagProps) => {
     return (
         <div
             className={cn(styles.Tag, className, {
