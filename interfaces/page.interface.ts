@@ -1,4 +1,4 @@
-const enum TopLevelCategory {
+export const enum TopLevelCategory {
     Courses,
     Services,
     Books,
