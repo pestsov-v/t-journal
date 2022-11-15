@@ -13,7 +13,7 @@ function Course({menu, page, products}: CourseProps): JSX.Element {
 
     return (
         <>
-            {products.length}
+            {products && products.length}
         </>
     );
 }
