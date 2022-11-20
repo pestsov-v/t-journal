@@ -8,6 +8,7 @@ import BooksIcon from '../../public/menu/books.svg';
 import CloudIcon from '../../public/menu/cloud.svg';
 import {TopLevelCategory} from "../../interfaces/page.interface";
 import cn from "classnames";
+import Link from 'next/link';
 
 
 const firstLevelMenu: FirstLevelMenuItem[] = [
@@ -25,15 +26,16 @@ export const Menu = (): JSX.Element => {
             <>
                 {firstLevelMenu.map(m => {
                         return (<div key={m.route}>
-                            <a href={`/${m.route}`}>
+                            <Link href={`/${m.route}`}>
                                     <div className={cn(styles.firstLevel, {
                                         [styles.firstLevelActive]: m.id === firstCategory
                                     })
-                                }>
-                                    {m.icon}
-                                    <span>{m.name}</span>
-                                </div>
-                            </a>
+                                    }>
+                                        {m.icon}
+                                        <span>{m.name}</span>
+                                    </div>
+                            </Link>
+
                             {m.id === firstCategory && buildSecondLevel(m)}
                         </div>);
                     }
@@ -65,12 +67,14 @@ export const Menu = (): JSX.Element => {
     const buildThirdLevel = (pages: PageItem[], route: string) => {
         return (
             pages.map(page => {
-               return (<a href={`/${route}/${page.alias}`} className={cn(styles.thirdLevel, {
-                   [styles.thirdLevelActive]: false
-               }
-               )}>
-                   {page.category}
-               </a>);
+               return (
+                   <Link href={`/${route}/${page.alias}`} className={cn(styles.thirdLevel, {
+                           [styles.thirdLevelActive]: false
+                       }
+                   )} key={page._id}>
+                       {page.category}
+                   </Link>
+               );
             })
         );
     };
