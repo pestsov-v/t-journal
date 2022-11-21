@@ -6,3 +6,4 @@ export * from './UI/Card/Card';
 
 export * from './Rating/Rating';
 export * from './HhData/HhData';
+export * from './Advantages/Advantages';

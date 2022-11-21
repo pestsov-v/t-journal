@@ -5,7 +5,7 @@ export const enum TopLevelCategory {
     Products,
 }
 
-interface TopPageAdvantage {
+export interface TopPageAdvantage {
     _id: string
     title: string
     description: string
@@ -27,14 +27,14 @@ export interface TopPageModel {
     alias: string
     title: string
     category: string
-    seoText: string
+    seoText?: string
     tagsTitle: string
     metaTitle: string
     metaDescription: string
     firstCategory: TopLevelCategory
-    advantages: TopPageAdvantage[]
+    advantages?: TopPageAdvantage[]
     createdAt: Date
     updatedAt: Date
     _v: number
-    hh: Hh
+    hh?: Hh
 }

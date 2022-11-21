@@ -41,6 +41,6 @@
 
 .primary {
 	color: var(--primary);
+	border: 1px solid var(--primary);
 	background: none;
-	border-radius: 1px solid var(--grey-ligth);
 }
