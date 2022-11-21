@@ -1,7 +1,8 @@
 import TopPageComponentProps from "./TopPageComponent.props";
-import {Advantages, HhData, HTag, Paragraph, Tag} from "../../components";
+import {Advantages, HhData, HTag, Sort, Tag} from "../../components";
 import styles from './TopPageComponent.module.css';
 import {TopLevelCategory} from "../../interfaces/page.interface";
+import {SortKind} from "../../components/Sort/Sort.props";
 
 export const TopPageComponent = ({firstCategory, products, page}: TopPageComponentProps): JSX.Element => {
     return (
@@ -9,7 +10,7 @@ export const TopPageComponent = ({firstCategory, products, page}: TopPageCompone
             <div className={styles.title}>
                 <HTag tag='h1'>{page.title}</HTag>
                 {products && <Tag color='grey' size='middle'>{products.length}</Tag>}
-                <span>Сортировка</span>
+                <Sort sort={SortKind.Rating} setSort={() => {}}/>
             </div>
             <div>
                 {products && products.map(p => (<div key={p._id}>{p.title}</div>))}
