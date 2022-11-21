@@ -4,6 +4,7 @@ import {WithLayout} from "../layout/Layout";
 import {GetStaticProps} from "next";
 import axios from "axios";
 import {MenuItem} from "../interfaces/menu.interface";
+import {TopPageComponent} from "../page-components";
 
 function Home({menu, firstCategory}: HomeProps): JSX.Element {
     const [counter, setCounter] = React.useState<number>(0);
@@ -24,7 +25,6 @@ function Home({menu, firstCategory}: HomeProps): JSX.Element {
         <Tag size='small' color='green'>Зелёный</Tag>
         <Tag size='middle' color='primary'>Приоритетный</Tag>
         <Rating rating={rating} isEditable={true} setRating={setRating}/>
-
     </>
   );
 }

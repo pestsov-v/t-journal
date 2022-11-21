@@ -11,7 +11,7 @@ interface TopPageAdvantage {
     description: string
 }
 
-interface Hh {
+export interface Hh {
     _id: string
     count: number
     juniorSalary: number
