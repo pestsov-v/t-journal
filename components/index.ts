@@ -4,6 +4,7 @@ export * from './UI/Paragraph/Paragraph';
 export * from './UI/Tag/Tag';
 export * from './UI/Card/Card';
 export * from './UI/Input/Input';
+export * from './UI/Textarea/Textarea';
 
 export * from './Rating/Rating';
 export * from './HhData/HhData';

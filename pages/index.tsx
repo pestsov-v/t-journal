@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Button, HTag, Input, Paragraph, Rating, Tag} from "../components";
+import {Button, HTag, Input, Paragraph, Rating, Tag, Textarea} from "../components";
 import {WithLayout} from "../layout/Layout";
 import {GetStaticProps} from "next";
 import axios from "axios";
@@ -26,6 +26,7 @@ function Home({menu, firstCategory}: HomeProps): JSX.Element {
         <Tag size='middle' color='primary'>Приоритетный</Tag>
         <Rating rating={rating} isEditable={true} setRating={setRating}/>
         <Input placeholder='tes'/>
+        <Textarea placeholder={'asass'}/>
     </>
   );
 }
