@@ -7,6 +7,7 @@ import {Button} from "../UI/Button/Button";
 import {declOfNum, priceRu} from "../../helpers/helpers";
 import {Divider} from "../UI/Divider/Divider";
 import Image from 'next/image';
+import cn from "classnames";
 
 export const Product = ({product, className, ...props}: ProductProps): JSX.Element => {
   return (
@@ -22,7 +23,7 @@ export const Product = ({product, className, ...props}: ProductProps): JSX.Eleme
           <div className={styles.title}>{product.title}</div>
           <div className={styles.price}>
               {priceRu(product.price)}
-              {product.oldPrice && <Tag className={styles.oldPrice} color='green'>{priceRu(product.price- product.oldPrice)}</Tag>}
+              {product.oldPrice && <Tag className={styles.oldPrice} color='green'>{priceRu(product.price - product.oldPrice)}</Tag>}
           </div>
           <div className={styles.credit}>{priceRu(product.credit)}/<span className={styles.month}>мес</span></div>
           <div className={styles.rating}><Rating rating={product.reviewAvg ?? product.initialRating}/></div>
@@ -51,7 +52,7 @@ export const Product = ({product, className, ...props}: ProductProps): JSX.Eleme
                   <div>{product.disadvantages}</div>
               </div>}
           </div>
-          <Divider  className={styles.hr}/>
+          <Divider  className={cn(styles.hr, styles.hr2)}/>
           <div className={styles.action}>
               <Button appearance='primary'>Узнать подробнее</Button>
               <Button appearance='ghost' arrow={'right'} className={styles.reviewButton}>Читать отзывы</Button>
