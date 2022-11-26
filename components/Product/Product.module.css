@@ -136,6 +136,21 @@
 	align-items: baseline;
 }
 
+.reviews {
+	margin-top: -30px;
+}
+
+.closed {
+	overflow: hidden;
+	max-width: 0;
+	padding: 0;
+}
+
+.opened {
+	max-height: 100vh;
+	padding: 30px;
+}
+
 @media screen and (max-width: 1320px) {
 	.product {
 		grid-template-columns: 70px 30px auto 40px auto 40px 1fr;
