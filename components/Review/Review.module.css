@@ -33,12 +33,12 @@
 	}
 }
 
-@media screen and (max-width: 320px) {
-	.rating {
+@media screen and (max-width: 640px) {
+	.date {
 		grid-column: start / end;
 	}
 
-	.date {
+	.rating {
 		grid-column: start / end;
 	}
 }
