@@ -124,10 +124,10 @@
 	padding-right: 60px;
 	font-size: 16px;
 	line-height: 32px;
+	gap: 10px;
 }
 
 .characteristicsName {
-	margin-right: 10px;
 	font-weight: bold;
 }
 
@@ -135,8 +135,4 @@
 	border-bottom: 1px dashed var(--grey-ligth);
 	margin-bottom: 5px;
 	align-items: baseline;
-}
-
-.characteristicsValue {
-	margin-left: 10px;
 }

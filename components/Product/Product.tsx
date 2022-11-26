@@ -29,7 +29,7 @@ export const Product = ({product, className, ...props}: ProductProps): JSX.Eleme
                   <div className={styles.characteristics} key={c.name}>
                       <span className={styles.characteristicsName}>{c.name}</span>
                       <span className={styles.characteristicsDots}></span>
-                      <span className={styles.characteristicsValue}>{c.value}</span>
+                      <span>{c.value}</span>
                   </div>
               ))}
           </div>
