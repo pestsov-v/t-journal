@@ -4,7 +4,7 @@ import styles from './Product.module.css';
 import {Rating} from "../Rating/Rating";
 import {Tag} from "../UI/Tag/Tag";
 import {Button} from "../UI/Button/Button";
-import {priceRu} from "../../helpers/helpers";
+import {declOfNum, priceRu} from "../../helpers/helpers";
 import {Divider} from "../UI/Divider/Divider";
 
 export const Product = ({product, className, ...props}: ProductProps): JSX.Element => {
@@ -21,7 +21,7 @@ export const Product = ({product, className, ...props}: ProductProps): JSX.Eleme
           <div className={styles.tags}>{product.tags.map(c => <Tag key={c} className={styles.category} color='ghost'>{c}</Tag>)}</div>
           <div className={styles.priceTitle}>Цена</div>
           <div className={styles.creditTitle}>Кредит</div>
-          <div className={styles.rateTitle}>{product.reviewCount} отзывов</div>
+          <div className={styles.rateTitle}>{product.reviewCount} {declOfNum(product.reviewCount, ['отзыв', 'отзыва', 'отзывов'])}</div>
           <Divider  className={styles.hr}/>
           <div className={styles.description}>{product.description}</div>
           <div className={styles.feature}>feature</div>
