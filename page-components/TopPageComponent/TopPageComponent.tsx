@@ -3,13 +3,17 @@ import {Advantages, HhData, HTag, Product, Sort, Tag} from "../../components";
 import styles from './TopPageComponent.module.css';
 import {TopLevelCategory} from "../../interfaces/page.interface";
 import {SortKind} from "../../components/Sort/Sort.props";
-import React from "react";
+import React, {useEffect} from "react";
 import {sortReducer} from "../../reducers/sort.reducer";
 
 export const TopPageComponent = ({firstCategory, products, page}: TopPageComponentProps): JSX.Element => {
     const [{products: sortedProducts, sort}, dispatchSort] = React.useReducer(sortReducer, {products, sort: SortKind.Rating});
 
     const setSort = (sort: SortKind) => dispatchSort({type: sort});
+
+    useEffect(() => {
+        dispatchSort({type: 'reset', initialState: products});
+    }, [products]);
 
 
     return (
