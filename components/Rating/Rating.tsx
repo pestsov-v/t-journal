@@ -4,7 +4,7 @@ import {RatingProps} from "./Rating.props";
 import StarIcon from '../../public/star.svg';
 import cn from 'classnames';
 
-export const Rating = forwardRef(({isEditable = false, rating, setRating, ...props}: RatingProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
+export const Rating = forwardRef(({isEditable = false, rating, error, setRating, ...props}: RatingProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
     const [ratingArray, setRatingArray] = React.useState<JSX.Element[]>(new Array(5).fill(<></>));
 
     useEffect(() => {
@@ -56,8 +56,12 @@ export const Rating = forwardRef(({isEditable = false, rating, setRating, ...pro
     };
 
     return (
-        <div {...props} ref={ref}>
+        <div {...props} ref={ref} className={cn(styles.ratingWrapper, {
+            [styles.error]: error
+        })}
+        >
             {ratingArray.map((r, i) => (<span key={i}>{r}</span>))}
+            {error && <span className={styles.errorMessage}>{error.message}</span>}
         </div>
     );
 });
