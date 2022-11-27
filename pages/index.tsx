@@ -5,6 +5,7 @@ import {GetStaticProps} from "next";
 import axios from "axios";
 import {MenuItem} from "../interfaces/menu.interface";
 import {TopPageComponent} from "../page-components";
+import api from "../helpers/api";
 
 function Home({menu, firstCategory}: HomeProps): JSX.Element {
     const [counter, setCounter] = React.useState<number>(0);
@@ -37,7 +38,7 @@ export default WithLayout(Home);
 
 export const getStaticProps: GetStaticProps = async () => {
     const firstCategory = 0;
-    const {data: menu} = await axios.post<MenuItem[]>('https://courses-top.ru' + '/api/top-page/find', {
+    const {data: menu} = await axios.post<MenuItem[]>(api.TOP_PAGE.FIND, {
         firstCategory
     });
 
