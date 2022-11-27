@@ -40,18 +40,7 @@
 }
 
 .secondLevelBlock {
-	display: none;
 	overflow: hidden;
-	padding: 0;
-	list-style: none;
-}
-
-.secondLevelBLockOpened {
-	display: block;
-}
-
-.secondLevelBLockOpened:last-child {
-	margin-bottom: 20px;
 }
 
 .thirdLevel {

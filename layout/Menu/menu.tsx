@@ -6,6 +6,7 @@ import cn from "classnames";
 import Link from 'next/link';
 import {useRouter} from "next/router";
 import {firstLevelMenu} from "../../helpers/helpers";
+import {motion} from 'framer-motion';
 
 
 export const Menu = (): JSX.Element => {
@@ -18,6 +19,30 @@ export const Menu = (): JSX.Element => {
             }
             return m;
         }));
+    };
+    
+    const variants = {
+        visible: {
+            marginBottom: 20,
+            transition: {
+                when: 'beforeChildren',
+                staggerChildren: 0.1,
+            }
+        },
+        hidden: {
+            marginBottom: 0
+        }
+    };
+
+    const childVariants = {
+        visible: {
+            opacity: 1,
+            height: 39
+        },
+        hidden: {
+            opacity: 0,
+            height: 0
+        }
     };
 
     const buildFirstLevel = () => {
@@ -53,12 +78,15 @@ export const Menu = (): JSX.Element => {
                     return (
                         <div key={m._id.secondCategory}>
                             <div className={styles.secondLevel} onClick={() => openSecondLevel(m._id.secondCategory)}>{m._id.secondCategory}</div>
-                            <div className={cn(styles.secondLevelBlock, {
-                                [styles.secondLevelBLockOpened]: m.isOpened
-                            }
-                            )}>
+                            <motion.div 
+                                layout
+                                variants={variants}
+                                initial={m.isOpened ? 'visible' : 'hidden'}
+                                animate={m.isOpened ? 'visible' : 'hidden'}
+                                className={cn(styles.secondLevelBlock)}
+                            >
                                 {buildThirdLevel(m.pages, menuItem.route)}
-                            </div>
+                            </motion.div>
                         </div>
                     );
                 })}
@@ -70,12 +98,17 @@ export const Menu = (): JSX.Element => {
         return (
             pages.map(page => {
                return (
-                   <Link href={`/${route}/${page.alias}`} className={cn(styles.thirdLevel, {
-                           [styles.thirdLevelActive]: `/${route}/${page.alias}` === router.asPath
-                       }
-                   )} key={page._id}>
-                       {page.category}
-                   </Link>
+                   <motion.div
+                       key={page._id}
+                       variants={childVariants}
+                   >
+                       <Link href={`/${route}/${page.alias}`} className={cn(styles.thirdLevel, {
+                               [styles.thirdLevelActive]: `/${route}/${page.alias}` === router.asPath
+                           }
+                       )}>
+                           {page.category}
+                       </Link>
+                   </motion.div>
                );
             })
         );
