@@ -1,11 +1,11 @@
 import {ProductProps} from "./Product.props";
-import {Card} from "../UI/Card/Card";
+import {Card} from "../../UI/Card/Card";
 import styles from './Product.module.css';
 import {Rating} from "../Rating/Rating";
-import {Tag} from "../UI/Tag/Tag";
-import {Button} from "../UI/Button/Button";
-import {declOfNum, priceRu} from "../../helpers/helpers";
-import {Divider} from "../UI/Divider/Divider";
+import {Tag} from "../../UI/Tag/Tag";
+import {Button} from "../../UI/Button/Button";
+import {declOfNum, priceRu} from "../../../helpers/helpers";
+import {Divider} from "../../UI/Divider/Divider";
 import Image from 'next/image';
 import cn from "classnames";
 import React, {ForwardedRef, forwardRef} from "react";

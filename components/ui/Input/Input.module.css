@@ -1,8 +1,7 @@
-.textarea {
+.input {
 	padding: 7px 15px;
 	color: var(--black);
 	border: none;
-	width: 100%;
 	outline-color: var(--primary);
 	background: var(--white);
 	box-shadow: 0 4px 4px rgb(0 0 0 / 5%);
@@ -12,7 +11,7 @@
 	font-family: var(--font-family);
 }
 
-.textarea ::placeholder {
+.input ::placeholder {
 	color: var(--gray);
 }
 
@@ -20,13 +19,13 @@
 	border: 1px solid var(--red);
 }
 
-.textareaWrapper {
+.inputWrapper {
 	position: relative;
 }
 
 .errorMessage {
 	position: absolute;
-	bottom: -15px;
+	bottom: -20px;
 	left: 0;
 	color: var(--red);
 }

@@ -1,6 +1,6 @@
 import {SortKind, SortProps} from "./Sort.props";
 import styles from './Sort.module.css';
-import SortIcon from '../../public/sort.svg';
+import SortIcon from '../../../public/sort.svg';
 import cn from 'classnames';
 
 export const Sort = ({sort, setSort, className, ...props }: SortProps): JSX.Element => {

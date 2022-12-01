@@ -2,7 +2,7 @@ import TopPageComponentProps from "./TopPageComponent.props";
 import {Advantages, HhData, HTag, Product, Sort, Tag} from "../../components";
 import styles from './TopPageComponent.module.css';
 import {TopLevelCategory} from "../../interfaces/page.interface";
-import {SortKind} from "../../components/Sort/Sort.props";
+import {SortKind} from "../../components/common/Sort/Sort.props";
 import React, {useEffect} from "react";
 import {sortReducer} from "../../reducers/sort.reducer";
 import {useScrollY} from "../../hooks/useScrollY";

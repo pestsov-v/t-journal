@@ -1,10 +1,10 @@
 import {SearchProps} from "./Search.props";
 import styles from './Search.module.css';
 import cn from 'classnames';
-import {Input} from "../UI/Input/Input";
-import {Button} from "../UI/Button/Button";
+import {Input} from "../../UI/Input/Input";
+import {Button} from "../../UI/Button/Button";
 import React, {KeyboardEvent} from "react";
-import GlassIcon from '../../public/search.svg';
+import GlassIcon from '../../../public/search.svg';
 import {useRouter} from "next/router";
 
 export const Search = ({className, ...props}: SearchProps): JSX.Element => {

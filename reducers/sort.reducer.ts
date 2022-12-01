@@ -1,4 +1,4 @@
-import {SortKind} from "../components/Sort/Sort.props";
+import {SortKind} from "../components/common/Sort/Sort.props";
 import {ProductModel} from "../interfaces/products.interface";
 
 export type SortAction = { type: SortKind.Price } | {type: SortKind.Rating} | { type: 'reset', initialState: ProductModel[] };

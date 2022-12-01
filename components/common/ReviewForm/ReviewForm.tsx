@@ -1,15 +1,15 @@
 import {ReviewFormProps} from "./ReviewForm.props";
 import cn from "classnames";
 import styles from './ReviewForm.module.css';
-import {Input} from "../UI/Input/Input";
+import {Input} from "../../UI/Input/Input";
 import {Rating} from "../Rating/Rating";
-import {Textarea} from "../UI/Textarea/Textarea";
-import {Button} from "../UI/Button/Button";
-import CloseIcon from '../../public/close.svg';
+import {Textarea} from "../../UI/Textarea/Textarea";
+import {Button} from "../../UI/Button/Button";
+import CloseIcon from '../../../public/close.svg';
 import {useForm, Controller } from "react-hook-form";
 import {IReviewForm, IReviewResponse} from "./ReviewForm.interface";
 import axios from "axios";
-import api from "../../helpers/api";
+import api from "../../../helpers/api";
 import React from "react";
 
 export const ReviewForm = ({productId, className, ...props}: ReviewFormProps): JSX.Element => {
