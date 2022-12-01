@@ -9,7 +9,7 @@ export const Up = (): JSX.Element => {
     const y = useScrollY();
 
     useEffect(() => {
-        control.start({opacity: y / document.body.scrollHeight});
+        control.start({opacity: y / document.body.scrollHeight}).catch(e => console.log(e));
     }, [y, control]);
 
     const scrollToTop = () => {

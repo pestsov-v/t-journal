@@ -1,8 +1,8 @@
 import {SearchProps} from "./Search.props";
 import styles from './Search.module.css';
 import cn from 'classnames';
-import {Input} from "../../UI/Input/Input";
-import {Button} from "../../UI/Button/Button";
+import {Input} from "../../ui/Input/Input";
+import {Button} from "../../ui/Button/Button";
 import React, {KeyboardEvent} from "react";
 import GlassIcon from '../../../public/search.svg';
 import {useRouter} from "next/router";

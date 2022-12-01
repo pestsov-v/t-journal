@@ -1,10 +1,10 @@
 import {ReviewFormProps} from "./ReviewForm.props";
 import cn from "classnames";
 import styles from './ReviewForm.module.css';
-import {Input} from "../../UI/Input/Input";
+import {Input} from "../../ui/Input/Input";
 import {Rating} from "../Rating/Rating";
-import {Textarea} from "../../UI/Textarea/Textarea";
-import {Button} from "../../UI/Button/Button";
+import {Textarea} from "../../ui/Textarea/Textarea";
+import {Button} from "../../ui/Button/Button";
 import CloseIcon from '../../../public/close.svg';
 import {useForm, Controller } from "react-hook-form";
 import {IReviewForm, IReviewResponse} from "./ReviewForm.interface";
